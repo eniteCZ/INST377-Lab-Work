@@ -12,6 +12,10 @@ body {
   background-color: darkslategray;
 }
 
+/*
+  TODO: Find out
+*/
+
 /* Page Layout */
 .columns {
   display: flex;
