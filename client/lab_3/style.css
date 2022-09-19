@@ -139,7 +139,7 @@ form {
   flex: 1 2 auto;
   margin: 1rem;
   align-items: center;
-  max-width: 450px;
+  max-width: 500px;
 }
 
 /*
@@ -181,7 +181,7 @@ form {
 }
 
 
-/* Deploy this with images as direct "children" and the images should pop into shape */
+/* Deploy this with images as direct "children" and the images should pop into shape 
 .grid {
   display: flex;
   justify-content: space-evenly;
@@ -195,11 +195,11 @@ form {
   width: 150px;
   height: 150px;
 }
-
+*/
 
 /* Carousel */
 div.carousel {
-  max-width: 300px;
+  max-width: 400px;
   overflow: hidden;
   text-align: center;
   display: flex;
@@ -239,7 +239,8 @@ div.carousel {
     - now make sure that images are _always_ square
     - ... there's a reason crop tools are popular in image editors
    */
-  width: 150px; 
+  width: 200px;
+  height: 200px;
 }
 
 .prev,
@@ -259,7 +260,7 @@ div.carousel {
 
 .prev:focus,
 .next:focus {
-  margin: 0;
+  /*margin: 0;*/
   border-color: orange;
   /* Pick a good border colour and check out how it works with your buttons */
 }
