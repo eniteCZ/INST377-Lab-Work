@@ -260,7 +260,7 @@ div.carousel {
 .prev:focus,
 .next:focus {
   margin: 0;
-  border-color: brown;
+  border-color: orange;
   /* Pick a good border colour and check out how it works with your buttons */
 }
 
