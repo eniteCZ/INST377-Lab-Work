@@ -30,6 +30,7 @@ function updateSlidePosition() {
     element.classList.remove('visible');
     element.classList.add('hidden');
   });
+  slides[slidePosition].classList.remove('hidden');
   slides[slidePosition].classList.add('visible');
 }
 
@@ -70,3 +71,9 @@ document.querySelector('.prev')
     console.log('clicked prev');
     moveToPrevSlide();
   });
+
+slidesArray.forEach((element) => {
+  element.classList.remove('visible');
+  element.classList.add('hidden');
+});
+slides[0].classList.add('visible');
