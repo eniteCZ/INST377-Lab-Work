@@ -30,6 +30,7 @@ function updateSlidePosition() {
     element.classList.remove('visible');
     element.classList.add('hidden');
   });
+  slides[slidePosition].classList.add('visible');
 }
 
 function moveToNextSlide() {
