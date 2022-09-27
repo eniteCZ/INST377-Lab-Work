@@ -140,13 +140,10 @@ form {
   margin: 1rem;
   align-items: center;
   max-width: 450px;
+  min-height: 600px;
 }
 
-/*
-  This block is actually dependent on the "container" block having a flex set on it
-  and the "wrapper" block displaying as a flex column with a "vertical height" (vh) of 100.
-  That serves to cram the footer to the bottom of the page.
-*/
+
 
 .footer {
   flex-shrink: 0;
