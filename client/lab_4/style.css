@@ -183,4 +183,7 @@ form input {
       flex-wrap: wrap;
       flex-grow: 1;
     }
+    .left_section{
+      width: 100%;
+    }
 }
