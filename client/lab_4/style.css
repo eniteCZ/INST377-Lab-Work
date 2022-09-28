@@ -146,7 +146,6 @@ form input {
     flex: 0 1 auto;
     margin: 1rem;
     padding: 1.5rem;
-    max-width: 450px;
   }
   
   .right_section {
@@ -154,8 +153,8 @@ form input {
     flex: 1 2 auto;
     margin: 1rem;
     align-items: center;
-    max-width: 600px;
     min-height: 300px;
+    text-align: center;
   }
   
   
@@ -180,6 +179,8 @@ form input {
     /* Rules in here will only apply when a screen is the correct size */
     /* check it out by using your developer tools to shrink your screen-size */
     .container {
-      display: block;
+      display: flex;
+      flex-wrap: wrap;
+      flex-grow: 1;
     }
 }
