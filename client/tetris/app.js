@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
     const displaySquares = document.querySelectorAll('.minigrid div');
     const displayWidth = 4;
     let displayIndex = 0;
-    let nextRandom = 0;
+    let nextRandom //= 0;
 
     const upNext = [
         [1, displayWidth+1, displayWidth*2+1, 2],
