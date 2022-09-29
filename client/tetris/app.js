@@ -96,6 +96,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
             draw()
             displayShape()
             addScore()
+            gameOver()
         }
     }
 
@@ -166,6 +167,13 @@ document.addEventListener('DOMContentLoaded', ()=>{
                 squares = squaresRemoved.concat(squares)
                 squares.forEach(cell => grid.appendChild(cell))
             }
+        }
+    }
+
+    function gameOver(){
+        if(currentTetr.some(index => squares[currentPos +index].classList.contains('taken'))){
+            ScoreDisplay.innerHTML= 'end your score was ' + score
+            clearInterval(timerID)
         }
     }
 
