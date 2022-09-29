@@ -52,10 +52,11 @@ document.addEventListener('DOMContentLoaded', ()=>{
       ];
 
     const Tetrs = [lTetr,tTetr,sqTetr,iTetr,zTetr];
-
-    let currentTetr = Tetrs[random][currentRot];
-    let random = Math.floor(Math.random()*Tetrs.length);
     
+    let random = Math.floor(Math.random()*Tetrs.length);
+    let currentTetr = Tetrs[random][currentRot];
+    
+
     const upNext = [
         [1, displayWidth+1, displayWidth*2+1, 2],
         [1,displayWidth+1,displayWidth*2+1,displayWidth*3+1],
