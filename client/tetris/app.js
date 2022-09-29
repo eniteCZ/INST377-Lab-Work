@@ -5,6 +5,16 @@ document.addEventListener('DOMContentLoaded', ()=>{
     let timerID; 
     const ScoreDisplay = document.querySelector('#score');
     let StartBtn = document.querySelector('#start-btn');
+    let currentPos = 4;
+    let currentRot = 0;
+    let random = Math.floor(Math.random()*Tetrs.length);
+    let currentTetr = Tetrs[random][currentRot];
+    const displaySquares = document.querySelectorAll('.minigrid div');
+    const displayWidth = 4;
+    let displayIndex = 0;
+    let nextRandom = 0;
+    let score = 0;
+
     
     const lTetr = [
         [1, width+1, width*2+1, 2],
@@ -43,14 +53,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
     const Tetrs = [lTetr,tTetr,sqTetr,iTetr,zTetr];
 
-    let currentPos = 4;
-    let currentRot = 0;
-    let random = Math.floor(Math.random()*Tetrs.length);
-    let currentTetr = Tetrs[random][currentRot];
-    const displaySquares = document.querySelectorAll('.minigrid div');
-    const displayWidth = 4;
-    let displayIndex = 0;
-    let nextRandom //= 0;
+    
 
     const upNext = [
         [1, displayWidth+1, displayWidth*2+1, 2],
@@ -144,6 +147,20 @@ document.addEventListener('DOMContentLoaded', ()=>{
         upNext[nextRandom].forEach(index => {
             displaySquares[displayIndex + index].classList.add('tetr')
         })
+    }
+
+    function addScore() {
+        for (let i = 0, i< 199, i+=width){
+            const row = [i, i+1, i+2, i+3, i+4, i+5, i+6, i+7, i+8, i+9]
+            if(row.every(index => squares[index].classList.contains('taken'))){
+                score += 10
+                ScoreDisplay.innerHTML = score
+                row.forEach(index=>{
+                    squares[index].classList.remove('taken')
+                } )
+                const squaresRemoved = squares
+            }
+        }
     }
 
     //timerID = setInterval(moveDown, 1000);
