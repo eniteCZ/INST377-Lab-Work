@@ -51,8 +51,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
         [width+1, width+2,width*2,width*2+1]
       ];
 
-    const Tetrs = [lTetr,tTetr,sqTetr,iTetr,zTetr];
-    
+    const Tetrs = [lTetr,iTetr,sqTetr,tTetr,zTetr];
+
     let random = Math.floor(Math.random()*Tetrs.length);
     let currentTetr = Tetrs[random][currentRot];
     
