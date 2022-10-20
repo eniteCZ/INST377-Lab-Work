@@ -190,15 +190,16 @@ form input {
     This comes from loading.io/css - it's nice to show that something is happening!
 */
 
-.lds-ellipsis_hiddden{
-  display: hidden;
-}
+
 
 .lds-ellipsis {
     display: inline-block;
     position: relative;
     width: 80px;
     height: 80px;
+  }
+  .lds-ellipsis_hidden{
+    display: hidden;
   }
   .lds-ellipsis div {
     position: absolute;

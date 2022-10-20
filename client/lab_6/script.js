@@ -93,8 +93,8 @@ async function mainEvent() {
   if (arrayFromJson.data?.length > 0) { // the question mark in this means "if this is set at all"
     submit.style.display = 'block'; // let's turn the submit button back on by setting it to display as a block when we have data available
 
-    loadAnimation.classList.remove('lds-elipsis')
-    loadAnimation.classList.add('lds-ellipsis_hidden')
+    loadAnimation.classList.remove('lds-ellipsis')
+    loadAnimation.classList.add('lds-ellipsis_hidde')
     // And here's an eventListener! It's listening for a "submit" button specifically being clicked
     // this is a synchronous event event, because we already did our async request above, and waited for it to resolve
     form.addEventListener('submit', (submitEvent) => {
