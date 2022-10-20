@@ -36,7 +36,9 @@ function processRestaurants(list) {
   const range = [...Array(15).keys()];
   const newArray = range.map((item) => {
     const index = getRandomIntInclusive(0, list.length);
-    return list[index];
+    let picked = list[index];
+    picked = (({ name, category, geocoded_column_1 }) => ({ name, category, geocoded_column_1 }))(picked);
+    return picked;
   });
   return newArray;
   /*
