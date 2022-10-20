@@ -154,7 +154,9 @@ form input {
     text-align: center;
   }
   
-  
+  .right_section ol{
+    text-align: left;
+  }
   
   .footer {
     flex-shrink: 0;
