@@ -27,6 +27,7 @@ function injectHTML(list) {
   list.forEach((rest) => {
     const el = document.createElement('li');
     el.innerText = `${rest.name} (${rest.category})`;
+    // Not shown in the vid but the task says we need the category too.
     listEl.appendChild(el);
   });
 }
@@ -38,6 +39,7 @@ function processRestaurants(list) {
     const index = getRandomIntInclusive(0, list.length);
     let picked = list[index];
     picked = (({ name, category, geocoded_column_1 }) => ({ name, category, geocoded_column_1 }))(picked);
+    // Gets us the desired data only.
     return picked;
   });
   return newArray;

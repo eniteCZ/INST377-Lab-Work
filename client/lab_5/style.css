@@ -94,7 +94,7 @@ Form Styles
     }
   
     .wrapper {
-      min-height: 60vh;
+      min-height: 90vh;
       display: flex;
       flex-direction: column;
       margin: 0;
