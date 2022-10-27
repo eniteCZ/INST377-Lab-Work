@@ -40,6 +40,15 @@ function processRestaurants(list) {
   return newArray;
 }
 
+function filterList(array, sift) {
+  const newArray = array.filter((item) => {
+    const lowerCaseName = item.name.toLowerCase();
+    const lowerCaseQuery = sift.toLowerCase();
+    return lowerCaseName.includes(lowerCaseQuery);
+  });
+  return newArray;
+}
+
 async function mainEvent() {
   /*
     ## Main Event
@@ -85,6 +94,13 @@ async function mainEvent() {
     loadAnimation.classList.add('lds-ellipsis_hidde');
     // And here's an eventListener! It's listening for a "submit" button specifically being clicked
     // this is a synchronous event event, because we already did our async request above, and waited for it to resolve
+    let currentList = [];
+    form.addEventListener('input', (event) => {
+      console.log(event.target.value);
+      const filtered_list = filterList(currentList, event.target.value);
+      injectHTML(filtered_list);
+    });
+
     form.addEventListener('submit', (submitEvent) => {
       // This is needed to stop our page from changing to a new URL even though it heard a GET request
       submitEvent.preventDefault();
@@ -94,6 +110,7 @@ async function mainEvent() {
       console.log(restaurantList);
       // And this function call will perform the "side effect" of injecting the HTML list for you
       injectHTML(restaurantList);
+      currentList = restaurantList
 
       // By separating the functions, we open the possibility of regenerating the list
       // without having to retrieve fresh data every time
