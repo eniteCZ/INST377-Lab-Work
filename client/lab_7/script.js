@@ -106,11 +106,10 @@ async function mainEvent() {
       submitEvent.preventDefault();
 
       // This constant will have the value of your 15-restaurant collection when it processes
-      const restaurantList = processRestaurants(arrayFromJson.data);
-      console.log(restaurantList);
+      currentList = processRestaurants(arrayFromJson.data);
+      console.log(currentList);
       // And this function call will perform the "side effect" of injecting the HTML list for you
-      injectHTML(restaurantList);
-      currentList = restaurantList
+      injectHTML(currentList);
 
       // By separating the functions, we open the possibility of regenerating the list
       // without having to retrieve fresh data every time
