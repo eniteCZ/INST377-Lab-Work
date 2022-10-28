@@ -42,6 +42,7 @@ function processRestaurants(list) {
 
 function filterList(array, sift) {
   const newArray = array.filter((item) => {
+    if (!item.name) { return; }
     const lowerCaseName = item.name.toLowerCase();
     const lowerCaseQuery = sift.toLowerCase();
     return lowerCaseName.includes(lowerCaseQuery);
