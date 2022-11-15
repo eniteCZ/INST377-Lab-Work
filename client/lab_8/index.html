@@ -5,6 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Filip Radmanovic"/>
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
+     integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
+     crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
+     integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg="
+     crossorigin=""></script>
     <link rel="stylesheet" href="style.css">
     <title xml:lang="en" lang="en">Random Bagel</title>
 </head>
@@ -36,6 +43,7 @@
             
             <div class = "box right_section">
                 <h2>Local Restaurants</h2>
+                <div id="map"></div>
                 <div class = "box", id="restaurant_list">
                     <p>A list of restaurants from an API</p>
                 </div>
