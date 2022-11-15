@@ -57,7 +57,7 @@ function initMap() {
     maxZoom: 19,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
   }).addTo(map);
-  return map
+  return map;
 }
 
 function markerPlace(array, map) {
@@ -70,8 +70,8 @@ function markerPlace(array, map) {
   array.forEach((item, index) => {
     const {coordinates} = item.geocoded_column_1;
     L.marker([coordinates[1], coordinates[0]]).addTo(map);
-    if(index === 0) {
-      map.setView([coordinates[1], coordinates[0]], 10)
+    if (index === 0) {
+      map.setView([coordinates[1], coordinates[0]], 10);
     }
   });
 }
