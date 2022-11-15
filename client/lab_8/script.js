@@ -50,6 +50,10 @@ function filterList(array, sift) {
   return newArray;
 }
 
+function initMap() {
+  console.log('initMap');
+}
+
 async function mainEvent() {
   /*
     ## Main Event

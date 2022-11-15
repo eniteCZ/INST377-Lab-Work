@@ -193,8 +193,14 @@
   */
 
   /* Map styles */
+  #map {
+    display: block;
+    height: 380px;
+    width: 400px;
+    border: 2px dashed rgb(99,99,99);
+    margin-bottom: 1rem;
+   }
   
-  #map { height: 180px; }
   
   .lds-ellipsis {
       display: inline-block;
@@ -253,4 +259,5 @@
       100% {
         transform: translate(24px, 0);
       }
-    }  
+    } 
+
