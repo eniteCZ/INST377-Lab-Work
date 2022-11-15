@@ -6,9 +6,9 @@
     https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
 */
 function getRandomIntInclusive(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min + 1) + min); // The maximum is inclusive and the minimum is inclusive
+  const newMin = Math.ceil(min);
+  const newMax = Math.floor(max);
+  return Math.floor(Math.random() * (newMax - newMin + 1) + newMin); // The maximum is inclusive and the minimum is inclusive
 }
 
 function injectHTML(list) {
@@ -98,8 +98,8 @@ async function mainEvent() {
     let currentList = [];
     form.addEventListener('input', (event) => {
       console.log(event.target.value);
-      const filtered_list = filterList(currentList, event.target.value);
-      injectHTML(filtered_list);
+      const filteredList = filterList(currentList, event.target.value);
+      injectHTML(filteredList);
     });
 
     form.addEventListener('submit', (submitEvent) => {
