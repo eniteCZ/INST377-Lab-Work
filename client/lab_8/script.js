@@ -52,7 +52,7 @@ function filterList(array, sift) {
 
 function initMap() {
   console.log('initMap');
-  const map = L.map('map').setView([39.0093, -77.0], 13);
+  const map = L.map('map').setView([38.99, -76.94], 13);
   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
@@ -67,9 +67,12 @@ function markerPlace(array, map) {
     }
   });
 
-  array.forEach(item => {
+  array.forEach((item, index) => {
     const {coordinates} = item.geocoded_column_1;
     L.marker([coordinates[1], coordinates[0]]).addTo(map);
+    if(index === 0) {
+      map.setView([coordinates[1], coordinates[0]], 11)
+    }
   });
 }
 
